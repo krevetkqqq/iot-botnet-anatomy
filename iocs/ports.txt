@@ -1,0 +1,15 @@
+8291  winbox
+8292  winbox (alt)
+8293  winbox (alt)
+8294  winbox (alt)
+8295  winbox (alt)
+8728  routeros api
+8729  routeros api ssl
+31281 SOCKS, включаемый ботнетом
+2121  FTP файлового сервера
+69    TFTP
+61616 ActiveMQ OpenWire
+9090  Openfire admin
+5269  XMPP s2s
+37777 Dahua
+34567 DVR

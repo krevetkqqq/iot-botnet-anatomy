@@ -337,32 +337,39 @@ pie
 
 ## 9. Эксплойты: что у них есть
 
-55 уникальных CVE в модулях. Ключевые:
+55 уникальных CVE в модулях. Где есть **моя лаба + PoC** — ссылка в последней колонке.
 
-| модуль | CVE | продукт | публичный PoC |
-|---|---|---|---|
-| openfire | CVE-2023-32315 | Openfire | да (15 репо) |
-| activemq | CVE-2023-46604 | ActiveMQ | да (46 репо) |
-| confluence | CVE-2022-26134 | Confluence | да |
-| jenkins | CVE-2018-1000861 | Jenkins | да |
-| tomcat | CVE-2017-12615 | Tomcat | да |
-| pfsense | CVE-2022-31814, -40624 | pfSense | частично |
-| manageengine | CVE-2021-44077 | ServiceDesk Plus | да |
-| mirth | CVE-2023-37679, -43208 | Mirth Connect | да |
-| ray | CVE-2023-48022 | Ray | да |
-| roller | CVE-2026-82384 | Apache Roller | нет лабы |
-| litellm | CVE-2026-42271, -49468 | LiteLLM | нет лабы |
-| flippercode | CVE-2026-6433 | WP-плагин | нет лабы |
-| hikvision | CVE-2021-36260 | Hikvision | да |
-| asus | CVE-2014-9583, -2023-39780, -41346/48 | ASUS | частично |
-| realtek_miniigd | CVE-2014-8361 | Realtek SDK | **нет лабы** |
-| totolink | CVE-2024-1781, -2025-28137 | TOTOLINK | **нет лабы** |
-| fiberhome | серия CVE-2021-271xx | FiberHome ONU | почти нет |
-| dasan | CVE-2018-17867, -2023-42495, -2025-29524/25 | Dasan GPON | нет |
-| thttpd | CVE-2023-41011 | thttpd | нет |
-| ruijie | CVE-2023-32311 | Ruijie | нет |
+| модуль | CVE | продукт | публичный PoC | моя лаба |
+|---|---|---|---|---|
+| openfire | CVE-2023-32315 | Openfire | да (15 репо) | [✅](https://github.com/krevetkqqq/cve-2023-32315-openfire-lab) |
+| activemq | CVE-2023-46604 | ActiveMQ | да (46) | [✅](https://github.com/krevetkqqq/cve-2023-46604-activemq-lab) |
+| pfsense | CVE-2022-40624 | pfSense pfBlockerNG | 1 | [✅](https://github.com/krevetkqqq/CVE-2022-40624) |
+| ray | CVE-2023-48022 | Anyscale Ray | 2 | [✅](https://github.com/krevetkqqq/CVE-2023-48022) |
+| roller | CVE-2026-82384 | Apache Roller | 1 | [✅](https://github.com/krevetkqqq/CVE-2026-82384) |
+| litellm | CVE-2026-49468 | LiteLLM | 1 | [✅](https://github.com/krevetkqqq/CVE-2026-49468) |
+| asus | CVE-2023-39780, -41346, -41348 | ASUS RT-AX55 | по 0 | [39780](https://github.com/krevetkqqq/CVE-2023-39780) · [41346](https://github.com/krevetkqqq/CVE-2023-41346) · [41348](https://github.com/krevetkqqq/CVE-2023-41348) |
+| realtek_miniigd | CVE-2014-8361 | Realtek SDK | 0 | [✅](https://github.com/krevetkqqq/CVE-2014-8361) |
+| totolink | CVE-2025-28137 | TOTOLINK A810R | 0 | [✅](https://github.com/krevetkqqq/CVE-2025-28137) |
+| boa | CVE-2020-8958 | Guangzhou 1GE ONU | 2 | [✅](https://github.com/krevetkqqq/CVE-2020-8958) |
+| dasan | CVE-2023-42495 | Dasan W-Web | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-42495) |
+| onu/thttpd | CVE-2023-41011 | China Mobile HG6543C4 | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-41011) |
+| fiberhome | CVE-2021-27177 | FiberHome HG6245D | 0 | [✅](https://github.com/krevetkqqq/CVE-2021-27177) |
+| emerge | CVE-2024-9441 | Linear eMerge e3 | 3 | [✅](https://github.com/krevetkqqq/CVE-2024-9441) |
+| zyxelcpe | CVE-2024-40891, -2025-0890 | Zyxel VMG4325-B10A | по 1 | [40891](https://github.com/krevetkqqq/CVE-2024-40891) · [0890](https://github.com/krevetkqqq/CVE-2025-0890) |
+| cloud (не RCE) | CVE-2023-32311 | **CloudExplorer Lite** (не Ruijie!) | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-32311) |
+| confluence | CVE-2022-26134 | Confluence | да | не делал (публично покрыто) |
+| jenkins | CVE-2018-1000861, -2024-23897 | Jenkins | да (57) | не делал (публично покрыто) |
+| tomcat | CVE-2017-12615 | Tomcat | да | не делал (публично покрыто) |
+| hikvision | CVE-2021-36260 | Hikvision | да | не делал (публично покрыто) |
+| zywall | CVE-2023-28771 | Zyxel ZyWALL | 3 | не делал (публично покрыто) |
+| manageengine | CVE-2021-44077 | ServiceDesk Plus | да | проприетарное, только mock |
+| mirth | CVE-2023-37679, -43208 | Mirth Connect | да | проприетарное, только mock |
+| flippercode | CVE-2026-6433 | WP-плагин | 1 | не делал |
 
-Полный список — в `cves.md` (генерируется из `src/modules/**`).
+Полный перечень (28 модулей, 55 CVE) — в [CVE-INVENTORY.md](CVE-INVENTORY.md).
+
+> Поправка к ранним версиям отчёта: `CVE-2023-32311` — это **CloudExplorer Lite**
+> (обход прав, CVSS 7.1), а не Ruijie; `CVE-2024-3721` (TBK) — CVSS 6.5, не чистый RCE.
 
 ### Приватное vs публичное
 

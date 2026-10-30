@@ -4,17 +4,21 @@
 
 ---
 
-## Кому отправил
+## Кому отправляем
 
-| провайдер | адрес | за что |
-|---|---|---|
-| RoyaleHosting BV (NL) | `abuse@royalehosting.nl` | файловый сервер раздачи payload'ов `45.90.13.169` |
-| VPSVAULT.HOST LTD (AS215925) | abuse-адрес из whois их ASN | приёмник биконов `45.205.1.10` |
-| AS209630 «Company 657aeb44…» (DE) | abuse по ASN | воркеры `151.243.11.240–242` |
-| AKKUMYS KADYROVA (NL) | abuse по whois | второй приёмник `176.98.182.21` |
-| TechTies Inc. | `abuse@tech-ties.net` | `87.121.84.78` |
-| BlueVPS (SE) | abuse по whois | выведенный узел `46.246.97.179` |
-| ISP из топ-ASN | abuse-адрес ISP | скомпрометированные устройства у них |
+RoyaleHosting BV (NL) — `abuse@royalehosting.nl` — файловый сервер раздачи payload'ов `45.90.13.169`,
+VPSVAULT.HOST LTD (AS215925) — abuse-адрес из whois их ASN — приёмник биконов `45.205.1.10`,
+AS209630 «Company 657aeb44…» (DE) — abuse по ASN — воркеры `151.243.11.240–242`,
+AKKUMYS KADYROVA (NL) — abuse по whois — второй приёмник `176.98.182.21`,
+TechTies Inc. — `abuse@tech-ties.net` — `87.121.84.78`,
+BlueVPS (SE) — abuse по whois — выведенный узел `46.246.97.179`,
+ISP из топ-ASN — abuse-адрес ISP — скомпрометированные устройства у них.
+
+## Тема письма
+
+**RU:** `Abuse-репорт — действующая инфраструктура IoT-ботнета в вашей сети`
+
+**EN:** `Abuse report — active IoT botnet infrastructure hosted in your network`
 
 ---
 

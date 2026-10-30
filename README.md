@@ -349,14 +349,15 @@ pie
 | ray | CVE-2023-48022 | Anyscale Ray | 2 | [✅](https://github.com/krevetkqqq/CVE-2023-48022) |
 | roller | CVE-2026-82384 | Apache Roller | 1 | [✅](https://github.com/krevetkqqq/CVE-2026-82384) |
 | litellm | CVE-2026-49468 | LiteLLM | 1 | [✅](https://github.com/krevetkqqq/CVE-2026-49468) |
-| asus | CVE-2023-39780, CVE-2023-41346, CVE-2023-41348 | ASUS RT-AX55 | по 0 | [39780](https://github.com/krevetkqqq/CVE-2023-39780) · [41346](https://github.com/krevetkqqq/CVE-2023-41346) · [41348](https://github.com/krevetkqqq/CVE-2023-41348) |
+| asus | CVE-2014-9583, CVE-2023-39780, CVE-2023-41346, CVE-2023-41348 | ASUS (infosvr / RT-AX55) | по 0 | [9583](https://github.com/krevetkqqq/CVE-2014-9583) · [39780](https://github.com/krevetkqqq/CVE-2023-39780) · [41346](https://github.com/krevetkqqq/CVE-2023-41346) · [41348](https://github.com/krevetkqqq/CVE-2023-41348) |
 | realtek_miniigd | CVE-2014-8361 | Realtek SDK | 0 | [✅](https://github.com/krevetkqqq/CVE-2014-8361) |
 | totolink | CVE-2025-28137 | TOTOLINK A810R | 0 | [✅](https://github.com/krevetkqqq/CVE-2025-28137) |
 | boa | CVE-2020-8958 | Guangzhou 1GE ONU | 2 | [✅](https://github.com/krevetkqqq/CVE-2020-8958) |
 | dasan | CVE-2023-42495 | Dasan W-Web | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-42495) |
 | onu/thttpd | CVE-2023-41011 | China Mobile HG6543C4 | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-41011) |
 | fiberhome | CVE-2021-27177 | FiberHome HG6245D | 0 | [✅](https://github.com/krevetkqqq/CVE-2021-27177) |
-| emerge | CVE-2024-9441 | Linear eMerge e3 | 3 | [✅](https://github.com/krevetkqqq/CVE-2024-9441) |
+| emerge | CVE-2019-7256, CVE-2024-9441 | Linear eMerge e3 | 0 / 3 | [7256](https://github.com/krevetkqqq/CVE-2019-7256) · [9441](https://github.com/krevetkqqq/CVE-2024-9441) |
+| faith | CVE-2024-9644 | Four-Faith F3x36 | 0 | [✅](https://github.com/krevetkqqq/CVE-2024-9644) |
 | zyxelcpe | CVE-2024-40891, CVE-2025-0890 | Zyxel VMG4325-B10A | по 1 | [40891](https://github.com/krevetkqqq/CVE-2024-40891) · [0890](https://github.com/krevetkqqq/CVE-2025-0890) |
 | cloud (не RCE) | CVE-2023-32311 | **CloudExplorer Lite** (не Ruijie!) | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-32311) |
 | confluence | CVE-2022-26134 | Confluence | да | не делал (публично покрыто) |
@@ -365,7 +366,8 @@ pie
 | hikvision | CVE-2021-36260 | Hikvision | да | не делал (публично покрыто) |
 | zywall | CVE-2023-28771 | Zyxel ZyWALL | 3 | не делал (публично покрыто) |
 | manageengine | CVE-2021-44077 | ServiceDesk Plus | да | проприетарное, только mock |
-| mirth | CVE-2023-37679, CVE-2023-43208 | Mirth Connect | да | проприетарное, только mock |
+| mirth | CVE-2023-37679, CVE-2023-43208 | Mirth Connect | 0 / да | [37679](https://github.com/krevetkqqq/CVE-2023-37679) (mock) |
+| puwell (скрипт) | CVE-2026-61515 | Puwell IP-камера (DebugShell 34567) | 0 | [✅](https://github.com/krevetkqqq/CVE-2026-61515) |
 | flippercode | CVE-2026-6433 | WP-плагин | 1 | не делал |
 
 Полный перечень (28 модулей, 55 CVE) — в [CVE-INVENTORY.md](CVE-INVENTORY.md).
@@ -472,3 +474,8 @@ localhost, безобидный payload):
 | [CVE-2023-32311](https://github.com/krevetkqqq/CVE-2023-32311) | CloudExplorer Lite | обход прав 7.1 |
 | [cve-2023-32315-openfire-lab](https://github.com/krevetkqqq/cve-2023-32315-openfire-lab) | Openfire | pre-auth RCE 9.8 |
 | [cve-2023-46604-activemq-lab](https://github.com/krevetkqqq/cve-2023-46604-activemq-lab) | ActiveMQ | pre-auth RCE 9.8 |
+| [CVE-2014-9583](https://github.com/krevetkqqq/CVE-2014-9583) | ASUS infosvr (UDP 9999) | pre-auth RCE, root |
+| [CVE-2019-7256](https://github.com/krevetkqqq/CVE-2019-7256) | Linear eMerge E3 | unauth RCE → root (CVE-2019-7261) |
+| [CVE-2023-37679](https://github.com/krevetkqqq/CVE-2023-37679) | NextGen Mirth Connect | pre-auth десериализация |
+| [CVE-2024-9644](https://github.com/krevetkqqq/CVE-2024-9644) | Four-Faith F3x36 | обход auth → RCE 9.8 |
+| [CVE-2026-61515](https://github.com/krevetkqqq/CVE-2026-61515) | Puwell IP-камера (DebugShell) | unauth RCE 9.8, root |

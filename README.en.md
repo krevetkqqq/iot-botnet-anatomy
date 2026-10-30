@@ -214,6 +214,11 @@ localhost only, harmless payload):
 | [CVE-2023-32311](https://github.com/krevetkqqq/CVE-2023-32311) | CloudExplorer Lite | authz bypass 7.1 |
 | [Openfire lab](https://github.com/krevetkqqq/cve-2023-32315-openfire-lab) | Openfire | pre-auth RCE 9.8 |
 | [ActiveMQ lab](https://github.com/krevetkqqq/cve-2023-46604-activemq-lab) | ActiveMQ | pre-auth RCE 9.8 |
+| [CVE-2014-9583](https://github.com/krevetkqqq/CVE-2014-9583) | ASUS infosvr (UDP 9999) | pre-auth RCE, root |
+| [CVE-2019-7256](https://github.com/krevetkqqq/CVE-2019-7256) | Linear eMerge E3 | unauth RCE → root (CVE-2019-7261) |
+| [CVE-2023-37679](https://github.com/krevetkqqq/CVE-2023-37679) | NextGen Mirth Connect | pre-auth deserialization |
+| [CVE-2024-9644](https://github.com/krevetkqqq/CVE-2024-9644) | Four-Faith F3x36 | auth bypass → RCE 9.8 |
+| [CVE-2026-61515](https://github.com/krevetkqqq/CVE-2026-61515) | Puwell IP camera (DebugShell) | unauth RCE 9.8, root |
 
 ## Abuse reporting
 

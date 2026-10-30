@@ -1,5 +1,7 @@
 # Anatomy of an IoT botnet: analysis of an operator dump
 
+[RU](README.md) · **EN**
+
 Analysis of a working machine and file server belonging to the operators of an
 IoT botnet (routers, cameras, DVRs). The material comes from a directory listing
 the operators exposed themselves.

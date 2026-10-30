@@ -1,6 +1,6 @@
 # Анатомия IoT-ботнета: разбор инфраструктуры
 
-**EN:** [English version](README.en.md)
+**RU** · [EN](README.en.md)
 
 [![IoCs](https://img.shields.io/badge/IoC-есть-blue)](iocs/)
 [![YARA](https://img.shields.io/badge/YARA-есть-green)](yara/)

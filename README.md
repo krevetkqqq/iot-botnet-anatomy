@@ -1,5 +1,7 @@
 # Анатомия IoT-ботнета: разбор инфраструктуры
 
+**EN:** [English version](README.en.md)
+
 [![IoCs](https://img.shields.io/badge/IoC-есть-blue)](iocs/)
 [![YARA](https://img.shields.io/badge/YARA-есть-green)](yara/)
 [![labs](https://img.shields.io/badge/labs-18%20CVE-orange)](#лаборатории-и-poc)
@@ -37,17 +39,17 @@
 
 ```mermaid
 flowchart LR
-    A["Панель / рабочая станция<br/>16.5.0.227"] --> B["Скан-сервер X99-2<br/>16.5.0.241 + пул .224-.228"]
-    A --> C["Воркеры<br/>151.243.11.240-242"]
-    B --> D["flowscan-musl<br/>масс-скан портов"]
-    C --> E["doorway<br/>движок эксплуатации"]
-    E --> F["Файловый сервер 45.90.13.169<br/>HTTP:80 FTP:2121 TFTP:69 raw-TCP<br/>Java payload :8080"]
-    F --> G["Токен-лоадеры<br/>по архитектурам"]
-    G --> H["Скомпрометированные устройства"]
-    H --> I["Бикон-приёмник<br/>45.205.1.9"]
-    H --> J["SOCKS на роутере :31281"]
-    J --> K["Внутренняя сеть жертвы"]
-    K --> L["Второй эшелон:<br/>камеры, CPE, роутеры"]
+    A[Panel 16.5.0.227] --> B[Scanner 16.5.0.241]
+    A --> C[Workers 151.243.11.240-242]
+    B --> D[flowscan-musl]
+    C --> E[doorway engine]
+    E --> F[Fileserver 45.90.13.169]
+    F --> G[Loaders by arch]
+    G --> H[Compromised devices]
+    H --> I[Beacon 45.205.1.9]
+    H --> J[SOCKS 31281]
+    J --> K[Victim LAN]
+    K --> L[Second wave]
 ```
 
 Дополнительно: `45.90.13.11:/srv/nfs` (NFS для payload'ов), `fd6.eu` (короткий
@@ -347,7 +349,7 @@ pie
 | ray | CVE-2023-48022 | Anyscale Ray | 2 | [✅](https://github.com/krevetkqqq/CVE-2023-48022) |
 | roller | CVE-2026-82384 | Apache Roller | 1 | [✅](https://github.com/krevetkqqq/CVE-2026-82384) |
 | litellm | CVE-2026-49468 | LiteLLM | 1 | [✅](https://github.com/krevetkqqq/CVE-2026-49468) |
-| asus | CVE-2023-39780, -41346, -41348 | ASUS RT-AX55 | по 0 | [39780](https://github.com/krevetkqqq/CVE-2023-39780) · [41346](https://github.com/krevetkqqq/CVE-2023-41346) · [41348](https://github.com/krevetkqqq/CVE-2023-41348) |
+| asus | CVE-2023-39780, CVE-2023-41346, CVE-2023-41348 | ASUS RT-AX55 | по 0 | [39780](https://github.com/krevetkqqq/CVE-2023-39780) · [41346](https://github.com/krevetkqqq/CVE-2023-41346) · [41348](https://github.com/krevetkqqq/CVE-2023-41348) |
 | realtek_miniigd | CVE-2014-8361 | Realtek SDK | 0 | [✅](https://github.com/krevetkqqq/CVE-2014-8361) |
 | totolink | CVE-2025-28137 | TOTOLINK A810R | 0 | [✅](https://github.com/krevetkqqq/CVE-2025-28137) |
 | boa | CVE-2020-8958 | Guangzhou 1GE ONU | 2 | [✅](https://github.com/krevetkqqq/CVE-2020-8958) |
@@ -355,15 +357,15 @@ pie
 | onu/thttpd | CVE-2023-41011 | China Mobile HG6543C4 | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-41011) |
 | fiberhome | CVE-2021-27177 | FiberHome HG6245D | 0 | [✅](https://github.com/krevetkqqq/CVE-2021-27177) |
 | emerge | CVE-2024-9441 | Linear eMerge e3 | 3 | [✅](https://github.com/krevetkqqq/CVE-2024-9441) |
-| zyxelcpe | CVE-2024-40891, -2025-0890 | Zyxel VMG4325-B10A | по 1 | [40891](https://github.com/krevetkqqq/CVE-2024-40891) · [0890](https://github.com/krevetkqqq/CVE-2025-0890) |
+| zyxelcpe | CVE-2024-40891, CVE-2025-0890 | Zyxel VMG4325-B10A | по 1 | [40891](https://github.com/krevetkqqq/CVE-2024-40891) · [0890](https://github.com/krevetkqqq/CVE-2025-0890) |
 | cloud (не RCE) | CVE-2023-32311 | **CloudExplorer Lite** (не Ruijie!) | 0 | [✅](https://github.com/krevetkqqq/CVE-2023-32311) |
 | confluence | CVE-2022-26134 | Confluence | да | не делал (публично покрыто) |
-| jenkins | CVE-2018-1000861, -2024-23897 | Jenkins | да (57) | не делал (публично покрыто) |
+| jenkins | CVE-2018-1000861, CVE-2024-23897 | Jenkins | да (57) | не делал (публично покрыто) |
 | tomcat | CVE-2017-12615 | Tomcat | да | не делал (публично покрыто) |
 | hikvision | CVE-2021-36260 | Hikvision | да | не делал (публично покрыто) |
 | zywall | CVE-2023-28771 | Zyxel ZyWALL | 3 | не делал (публично покрыто) |
 | manageengine | CVE-2021-44077 | ServiceDesk Plus | да | проприетарное, только mock |
-| mirth | CVE-2023-37679, -43208 | Mirth Connect | да | проприетарное, только mock |
+| mirth | CVE-2023-37679, CVE-2023-43208 | Mirth Connect | да | проприетарное, только mock |
 | flippercode | CVE-2026-6433 | WP-плагин | 1 | не делал |
 
 Полный перечень (28 модулей, 55 CVE) — в [CVE-INVENTORY.md](CVE-INVENTORY.md).
